@@ -1,0 +1,26 @@
+{
+  "name": "sistemtakip-desktop",
+  "productName": "SistemTakip",
+  "version": "1.0.0",
+  "description": "SistemTakip masaüstü uygulaması — her seferinde siteye girmek zorunda kalmadan",
+  "main": "src/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --mac",
+    "dist:universal": "electron-builder --mac --universal"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "com.sistemtakip.desktop",
+    "productName": "SistemTakip",
+    "files": ["src/**/*", "package.json"],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "target": ["dmg", "zip"]
+    }
+  }
+}
